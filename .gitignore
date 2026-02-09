@@ -1,0 +1,25 @@
+﻿# OS files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Backup files
+*.backup*
+*.settings-backup*
+backup_*/
+settings-pattern.txt
+
+# Test files
+test-*.html
+demo-*.html
+quick-*.html
+verify-*.ps1
+check-*.ps1
+fix-*.ps1
+cleanup-*.ps1
+view-*.ps1
+
+# Temp files
+g = Update*
+ter*)

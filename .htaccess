@@ -1,0 +1,27 @@
+﻿# Prevent directory listing
+Options -Indexes
+
+# Protect config files
+<FilesMatch "^(config|setup_database)\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Protect uploads directory
+<FilesMatch "\.(php|php5|php7|phtml)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Prevent access to .env files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Redirect to login if accessing admin pages without authentication
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/(dashboard|admin) [NC]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME} \.php$
+RewriteRule ^ - [L]

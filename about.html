@@ -1,0 +1,3026 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MTEULE Ventures</title>
+    <meta name="description" content="Learn about MTEULE Ventures - your trusted delivery partner in Kayole since 2018. Our story, mission, team, and values.">
+    
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #059669;
+            --accent: #7c3aed;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --glass: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
+            --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.25);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+        }
+        
+        /* Glass Morphism */
+        .glass {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 1rem 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: white;
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.25rem;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-link {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 80%;
+        }
+        
+        .nav-link.active {
+            background: var(--primary);
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--glass-border);
+        }
+        
+        .btn-outline:hover {
+            background: var(--glass);
+            border-color: var(--primary);
+        }
+        
+        /* Page Hero */
+        .page-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.2), transparent 70%);
+            z-index: -1;
+        }
+        
+        .page-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .page-subtitle {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 6rem 2rem;
+            position: relative;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Story Section */
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+        
+        .story-image {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .story-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;  /* Changed from 'cover' to 'contain' */
+    object-position: center;  /* Centers the image */
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(16, 185, 129, 0.1));
+    transition: transform 0.5s ease;
+}
+        
+        .story-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .story-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .story-content p {
+            font-size: 1.125rem;
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        /* Mission Vision Values */
+        .mv-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 6rem;
+        }
+        
+        .mv-card {
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mv-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .mv-card:hover::before {
+            opacity: 0.1;
+        }
+        
+        .mv-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .mission {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(37, 99, 235, 0.05));
+            border: 1px solid rgba(37, 99, 235, 0.2);
+        }
+        
+        .vision {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.05));
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+        
+        .values {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+        
+        .mv-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 2rem;
+        }
+        
+        .mission .mv-icon {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        }
+        
+        .vision .mv-icon {
+            background: linear-gradient(135deg, var(--secondary), #047857);
+        }
+        
+        .values .mv-icon {
+            background: linear-gradient(135deg, var(--accent), #059669);
+        }
+        
+        .mv-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .mv-card p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 6rem;
+        }
+        
+        .team-member {
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            background: var(--glass);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .member-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 1.5rem;
+            border: 3px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+        }
+        
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .member-role {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .member-bio {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(245, 158, 11, 0.1));
+            border-radius: 40px;
+            margin: 4rem 2rem;
+            padding: 4rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat h3 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stat p {
+            color: #cbd5e1;
+            font-weight: 500;
+        }
+        
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 6rem;
+        }
+        
+        .testimonial-card {
+            padding: 2.5rem;
+            border-radius: 20px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+        
+        .testimonial-content {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .testimonial-content::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.3;
+            font-family: serif;
+        }
+        
+        .testimonial-content p {
+            font-size: 1.125rem;
+            color: #cbd5e1;
+            line-height: 1.7;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+        
+        .author-info p {
+            color: var(--primary);
+            font-size: 0.875rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(245, 158, 11, 0.1));
+            border-radius: 30px;
+            margin: 4rem 0;
+        }
+        
+        .cta-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Floating CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .cta-button {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            border: none;
+            color: white;
+            font-size: 1.25rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.1) rotate(90deg);
+            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.6);
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 4rem 2rem 2rem;
+            background: rgba(15, 23, 42, 0.95);
+            border-top: 1px solid var(--glass-border);
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        .contact-info {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            color: #cbd5e1;
+        }
+        
+        .contact-info i {
+            color: var(--primary);
+            margin-top: 0.25rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid var(--glass-border);
+            color: #64748b;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .story-grid,
+            .mv-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .page-title {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    
+
+
+
+.settings-icon:hover {
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 6px 30px rgba(37, 99, 235, 0.6);
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Settings Panel */
+.settings-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100vh;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border-left: 1px solid var(--glass-border);
+    z-index: 10000;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-panel.active {
+    right: 0;
+}
+
+.settings-header {
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--glass-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.settings-header h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.settings-header i {
+    color: var(--primary);
+}
+
+.settings-close {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-close:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.settings-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+.setting-group {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.setting-group:last-child {
+    border-bottom: none;
+}
+
+.setting-group h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.setting-group i {
+    color: var(--primary);
+    width: 20px;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.theme-btn {
+    padding: 0.75rem 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.theme-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* Font Size Controls */
+.font-size-control {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.font-btn {
+    flex: 1;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.font-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.font-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* Switch Toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--primary);
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+/* Reset Button */
+.btn-reset {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 8px;
+    color: #f87171;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.btn-reset:hover {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+/* Footer */
+.setting-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #64748b;
+    font-size: 0.75rem;
+}
+
+.setting-footer p {
+    margin: 0.25rem 0;
+}
+
+/* Light Theme Variables */
+body.light-mode {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #059669;
+    --accent: #7c3aed;
+    --dark: #ffffff;
+    --light: #0f172a;
+    --gray: #64748b;
+    --glass: rgba(0, 0, 0, 0.05);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    color: #1e293b;
+}
+
+body.light-mode .header {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .nav-link {
+    color: #475569;
+}
+
+body.light-mode .nav-link:hover {
+    color: var(--primary);
+}
+
+body.light-mode .page-title,
+body.light-mode .section-title {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.light-mode .page-subtitle,
+body.light-mode .section-subtitle {
+    color: #475569;
+}
+
+body.light-mode .glass {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Font Size Classes */
+body.font-small {
+    font-size: 14px;
+}
+
+body.font-medium {
+    font-size: 16px;
+}
+
+body.font-large {
+    font-size: 18px;
+}
+
+/* Animation Disabled */
+body.animations-disabled * {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .settings-panel {
+        width: 300px;
+    }
+    
+    .settings-icon {
+        bottom: 15px;
+        left: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .settings-panel {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .settings-panel.active {
+        right: 0;
+    }
+}
+
+
+
+}
+
+@media (max-width: 480px) {
+    .settings-panel {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .settings-panel.active {
+        right: 0;
+    }
+}
+
+/* ===== SETTINGS SYSTEM ===== */
+.settings-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10000;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+}
+
+.settings-icon:hover {
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 6px 30px rgba(37, 99, 235, 0.6);
+}
+
+.settings-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10001;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.settings-panel.active {
+    right: 0;
+}
+
+.settings-header {
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.settings-header h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.settings-header h3 i {
+    color: #2563eb;
+}
+
+.settings-close {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.settings-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.setting-group {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.setting-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.setting-group h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.setting-group h4 i {
+    color: #2563eb;
+    width: 20px;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.theme-btn {
+    padding: 0.75rem 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    border: none;
+    outline: none;
+}
+
+.theme-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-btn.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+/* Font Size Controls */
+.font-size-control {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.font-btn {
+    flex: 1;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.font-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.font-btn.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background-color: #2563eb;
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(30px);
+}
+
+/* Reset Button */
+.btn-reset {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 8px;
+    color: #f87171;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    border: none;
+    outline: none;
+}
+
+.btn-reset:hover {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+/* Setting Footer */
+.setting-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #64748b;
+    font-size: 0.75rem;
+}
+
+.setting-footer p {
+    margin: 0.25rem 0;
+}
+
+/* Light Theme */
+body.light-mode .settings-panel {
+    background: rgba(255, 255, 255, 0.95);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .settings-header {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .settings-header h3,
+body.light-mode .setting-group h4 {
+    color: #1e293b;
+}
+
+body.light-mode .theme-btn,
+body.light-mode .font-btn {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #475569;
+}
+
+body.light-mode .theme-btn:hover,
+body.light-mode .font-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .theme-btn.active,
+body.light-mode .font-btn.active {
+    background: #2563eb;
+    color: white;
+}
+
+body.light-mode .toggle-slider {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .setting-footer {
+    color: #64748b;
+}
+
+/* Font Size Classes */
+body.font-small {
+    font-size: 14px;
+}
+
+body.font-medium {
+    font-size: 16px;
+}
+
+body.font-large {
+    font-size: 18px;
+}
+
+/* Animations Disabled */
+body.animations-disabled * {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .settings-panel {
+        width: 300px;
+        right: -300px;
+    }
+    
+    .settings-icon {
+        bottom: 15px;
+        left: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .settings-panel {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .settings-panel.active {
+        right: 0;
+    }
+    
+    .theme-toggle {
+        grid-template-columns: 1fr;
+    }
+}
+
+    /* Font Variables */
+    :root {
+        --font-heading: 'Poppins', 'Space Grotesk', sans-serif;
+        --font-body: 'Inter', 'Montserrat', sans-serif;
+        --font-accent: 'Playfair Display', serif;
+        --font-mono: 'Roboto Mono', monospace;
+        
+        /* Font Sizes */
+        --text-xs: 0.75rem;     /* 12px */
+        --text-sm: 0.875rem;    /* 14px */
+        --text-base: 1rem;      /* 16px */
+        --text-lg: 1.125rem;    /* 18px */
+        --text-xl: 1.25rem;     /* 20px */
+        --text-2xl: 1.5rem;     /* 24px */
+        --text-3xl: 1.875rem;   /* 30px */
+        --text-4xl: 2.25rem;    /* 36px */
+        --text-5xl: 3rem;       /* 48px */
+        --text-6xl: 3.75rem;    /* 60px */
+        
+        /* Line Heights */
+        --leading-tight: 1.25;
+        --leading-snug: 1.375;
+        --leading-normal: 1.5;
+        --leading-relaxed: 1.625;
+        --leading-loose: 2;
+        
+        /* Letter Spacing */
+        --tracking-tight: -0.025em;
+        --tracking-normal: 0;
+        --tracking-wide: 0.025em;
+        --tracking-wider: 0.05em;
+    }
+    
+    /* Apply Fonts */
+    body {
+        font-family: var(--font-body);
+        font-weight: 400;
+        line-height: var(--leading-normal);
+        letter-spacing: var(--tracking-normal);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        line-height: var(--leading-tight);
+        letter-spacing: var(--tracking-tight);
+    }
+    
+    .page-title, .section-title, .cta-title {
+        font-family: var(--font-accent);
+        font-weight: 800;
+        letter-spacing: var(--tracking-wide);
+    }
+    
+    .logo, .nav-link, .btn {
+        font-family: var(--font-heading);
+        font-weight: 600;
+        letter-spacing: var(--tracking-normal);
+    }
+    
+    code, pre, .stat h3 {
+        font-family: var(--font-mono);
+        font-weight: 500;
+    }
+    
+    /* Improved Typography Scale */
+    .page-title {
+        font-size: var(--text-6xl);
+        line-height: var(--leading-tight);
+    }
+    
+    .section-title {
+        font-size: var(--text-5xl);
+        line-height: var(--leading-tight);
+    }
+    
+    .section-subtitle {
+        font-size: var(--text-xl);
+        line-height: var(--leading-relaxed);
+        font-weight: 300;
+    }
+    
+    .story-content h2 {
+        font-size: var(--text-4xl);
+        line-height: var(--leading-tight);
+    }
+    
+    .story-content p {
+        font-size: var(--text-lg);
+        line-height: var(--leading-relaxed);
+    }
+    
+    .mv-card h3 {
+        font-size: var(--text-2xl);
+        line-height: var(--leading-snug);
+    }
+    
+    .member-info h3 {
+        font-size: var(--text-xl);
+        line-height: var(--leading-snug);
+    }
+    
+    .testimonial-content p {
+        font-size: var(--text-lg);
+        line-height: var(--leading-relaxed);
+        font-style: italic;
+    }
+    
+    .btn {
+        font-size: var(--text-base);
+        letter-spacing: var(--tracking-wide);
+        text-transform: uppercase;
+    }
+    
+    /* Responsive Typography */
+    @media (max-width: 1024px) {
+        .page-title {
+            font-size: var(--text-5xl);
+        }
+        
+        .section-title {
+            font-size: var(--text-4xl);
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .page-title {
+            font-size: var(--text-4xl);
+        }
+        
+        .section-title {
+            font-size: var(--text-3xl);
+        }
+        
+        .story-content h2 {
+            font-size: var(--text-3xl);
+        }
+        
+        body {
+            font-size: var(--text-sm);
+        }
+    }
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enhanced focus styles for accessibility */
+*:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Subtle hover animations for cards */
+.mv-card, .team-member, .testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mv-card:hover, .team-member:hover, .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Animated underline for navigation */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Pulse animation for CTA buttons */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+    }
+}
+
+.btn-primary {
+    animation: pulse 2s infinite;
+}
+
+/* Fade-in animation for page elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Staggered animations for grid items */
+.story-grid > *,
+.mv-grid > *,
+.team-grid > *,
+.testimonials-grid > * {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.story-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.story-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.mv-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.mv-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.mv-grid > *:nth-child(3) { animation-delay: 0.3s; }
+.team-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.team-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.team-grid > *:nth-child(3) { animation-delay: 0.3s; }
+.testimonials-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.testimonials-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.testimonials-grid > *:nth-child(3) { animation-delay: 0.3s; }
+</style>
+
+<style>
+/* Style for all images in About Us section */
+.story-image img,
+.team-member .member-image img,
+.testimonial-card .author-image img {
+    background-color: white !important;
+    border: 3px solid #e5e7eb !important; /* Grey accent border */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    padding: 5px !important;
+}
+
+/* Story image specific styling */
+.story-image img {
+    object-fit: contain !important;
+    background-color: white !important;
+    border: 4px solid #d1d5db !important;
+    padding: 8px !important;
+    border-radius: 15px !important;
+}
+
+/* Team member images */
+.team-member .member-image {
+    background-color: white !important;
+    border: 4px solid #e5e7eb !important;
+    padding: 5px !important;
+}
+
+.team-member .member-image img {
+    border: none !important;
+    padding: 0 !important;
+}
+
+/* Testimonial author images */
+.testimonial-card .author-image {
+    background-color: white !important;
+    border: 3px solid #f3f4f6 !important;
+    padding: 3px !important;
+}
+
+.testimonial-card .author-image img {
+    border: none !important;
+    padding: 0 !important;
+}
+
+/* Add grey accent background to image containers */
+.story-image,
+.member-image,
+.author-image {
+    background: linear-gradient(135deg, #f9fafb, #f3f4f6) !important;
+    padding: 8px !important;
+    border-radius: 20px !important;
+}
+
+/* Ensure all images maintain aspect ratio */
+img {
+    object-fit: contain !important;
+}
+
+/* ===== SETTINGS SYSTEM ===== */
+.settings-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10000;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+}
+
+.settings-icon:hover {
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 6px 30px rgba(37, 99, 235, 0.6);
+}
+
+.settings-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10001;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.settings-panel.active {
+    right: 0;
+}
+
+.settings-header {
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.settings-header h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.settings-header h3 i {
+    color: #2563eb;
+}
+
+.settings-close {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.settings-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.setting-group {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.setting-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.setting-group h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.setting-group h4 i {
+    color: #2563eb;
+    width: 20px;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.theme-btn {
+    padding: 0.75rem 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    border: none;
+    outline: none;
+}
+
+.theme-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-btn.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+/* Font Size Controls */
+.font-size-control {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.font-btn {
+    flex: 1;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.font-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.font-btn.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background-color: #2563eb;
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(30px);
+}
+
+/* Reset Button */
+.btn-reset {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 8px;
+    color: #f87171;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    border: none;
+    outline: none;
+}
+
+.btn-reset:hover {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+/* Setting Footer */
+.setting-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #64748b;
+    font-size: 0.75rem;
+}
+
+.setting-footer p {
+    margin: 0.25rem 0;
+}
+
+/* Light Theme */
+body.light-mode .settings-panel {
+    background: rgba(255, 255, 255, 0.95);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .settings-header {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .settings-header h3,
+body.light-mode .setting-group h4 {
+    color: #1e293b;
+}
+
+body.light-mode .theme-btn,
+body.light-mode .font-btn {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #475569;
+}
+
+body.light-mode .theme-btn:hover,
+body.light-mode .font-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .theme-btn.active,
+body.light-mode .font-btn.active {
+    background: #2563eb;
+    color: white;
+}
+
+body.light-mode .toggle-slider {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .setting-footer {
+    color: #64748b;
+}
+
+/* Font Size Classes */
+body.font-small {
+    font-size: 14px;
+}
+
+body.font-medium {
+    font-size: 16px;
+}
+
+body.font-large {
+    font-size: 18px;
+}
+
+/* Animations Disabled */
+body.animations-disabled * {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .settings-panel {
+        width: 300px;
+        right: -300px;
+    }
+    
+    .settings-icon {
+        bottom: 15px;
+        left: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .settings-panel {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .settings-panel.active {
+        right: 0;
+    }
+    
+    .theme-toggle {
+        grid-template-columns: 1fr;
+    }
+}
+
+    /* Font Variables */
+    :root {
+        --font-heading: 'Poppins', 'Space Grotesk', sans-serif;
+        --font-body: 'Inter', 'Montserrat', sans-serif;
+        --font-accent: 'Playfair Display', serif;
+        --font-mono: 'Roboto Mono', monospace;
+        
+        /* Font Sizes */
+        --text-xs: 0.75rem;     /* 12px */
+        --text-sm: 0.875rem;    /* 14px */
+        --text-base: 1rem;      /* 16px */
+        --text-lg: 1.125rem;    /* 18px */
+        --text-xl: 1.25rem;     /* 20px */
+        --text-2xl: 1.5rem;     /* 24px */
+        --text-3xl: 1.875rem;   /* 30px */
+        --text-4xl: 2.25rem;    /* 36px */
+        --text-5xl: 3rem;       /* 48px */
+        --text-6xl: 3.75rem;    /* 60px */
+        
+        /* Line Heights */
+        --leading-tight: 1.25;
+        --leading-snug: 1.375;
+        --leading-normal: 1.5;
+        --leading-relaxed: 1.625;
+        --leading-loose: 2;
+        
+        /* Letter Spacing */
+        --tracking-tight: -0.025em;
+        --tracking-normal: 0;
+        --tracking-wide: 0.025em;
+        --tracking-wider: 0.05em;
+    }
+    
+    /* Apply Fonts */
+    body {
+        font-family: var(--font-body);
+        font-weight: 400;
+        line-height: var(--leading-normal);
+        letter-spacing: var(--tracking-normal);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        line-height: var(--leading-tight);
+        letter-spacing: var(--tracking-tight);
+    }
+    
+    .page-title, .section-title, .cta-title {
+        font-family: var(--font-accent);
+        font-weight: 800;
+        letter-spacing: var(--tracking-wide);
+    }
+    
+    .logo, .nav-link, .btn {
+        font-family: var(--font-heading);
+        font-weight: 600;
+        letter-spacing: var(--tracking-normal);
+    }
+    
+    code, pre, .stat h3 {
+        font-family: var(--font-mono);
+        font-weight: 500;
+    }
+    
+    /* Improved Typography Scale */
+    .page-title {
+        font-size: var(--text-6xl);
+        line-height: var(--leading-tight);
+    }
+    
+    .section-title {
+        font-size: var(--text-5xl);
+        line-height: var(--leading-tight);
+    }
+    
+    .section-subtitle {
+        font-size: var(--text-xl);
+        line-height: var(--leading-relaxed);
+        font-weight: 300;
+    }
+    
+    .story-content h2 {
+        font-size: var(--text-4xl);
+        line-height: var(--leading-tight);
+    }
+    
+    .story-content p {
+        font-size: var(--text-lg);
+        line-height: var(--leading-relaxed);
+    }
+    
+    .mv-card h3 {
+        font-size: var(--text-2xl);
+        line-height: var(--leading-snug);
+    }
+    
+    .member-info h3 {
+        font-size: var(--text-xl);
+        line-height: var(--leading-snug);
+    }
+    
+    .testimonial-content p {
+        font-size: var(--text-lg);
+        line-height: var(--leading-relaxed);
+        font-style: italic;
+    }
+    
+    .btn {
+        font-size: var(--text-base);
+        letter-spacing: var(--tracking-wide);
+        text-transform: uppercase;
+    }
+    
+    /* Responsive Typography */
+    @media (max-width: 1024px) {
+        .page-title {
+            font-size: var(--text-5xl);
+        }
+        
+        .section-title {
+            font-size: var(--text-4xl);
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .page-title {
+            font-size: var(--text-4xl);
+        }
+        
+        .section-title {
+            font-size: var(--text-3xl);
+        }
+        
+        .story-content h2 {
+            font-size: var(--text-3xl);
+        }
+        
+        body {
+            font-size: var(--text-sm);
+        }
+    }
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enhanced focus styles for accessibility */
+*:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Subtle hover animations for cards */
+.mv-card, .team-member, .testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mv-card:hover, .team-member:hover, .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Animated underline for navigation */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Pulse animation for CTA buttons */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+    }
+}
+
+.btn-primary {
+    animation: pulse 2s infinite;
+}
+
+/* Fade-in animation for page elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Staggered animations for grid items */
+.story-grid > *,
+.mv-grid > *,
+.team-grid > *,
+.testimonials-grid > * {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.story-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.story-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.mv-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.mv-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.mv-grid > *:nth-child(3) { animation-delay: 0.3s; }
+.team-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.team-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.team-grid > *:nth-child(3) { animation-delay: 0.3s; }
+.testimonials-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.testimonials-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.testimonials-grid > *:nth-child(3) { animation-delay: 0.3s; }
+</style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">⚡</div>
+                <span>MTEULE <span style="color: var(--secondary);">Ventures</span></span>
+            </a>
+            
+            <nav>
+                                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="tracking.html" class="nav-link">Track</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="admin-login-simple.html" class="btn btn-primary">Admin</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" style="display: none;">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero animate__animated animate__fadeIn">
+        <div class="container">
+            <h1 class="page-title">About MTEULE Ventures</h1>
+            <p class="page-subtitle">
+                Your trusted delivery partner in Kayole Junction since 2018
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="section">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-content animate__animated animate__fadeInLeft">
+                    <h2>Our Story</h2>
+                    <p>
+                        MTEULE Ventures was founded in 2018 by Michael Mteule, a lifelong resident of Kayole Junction. 
+                        What started as a small bicycle delivery service with just one employee has grown into one of 
+                        the most trusted delivery companies in the area.
+                    </p>
+                    <p>
+                        Michael saw a need for reliable, affordable delivery services in Kayole as the community 
+                        continued to grow. Many residents were spending valuable time traveling to collect packages, 
+                        food, and groceries when they could be focusing on their work and families.
+                    </p>
+                    <p>
+                        Today, we serve hundreds of customers daily with a fleet of 15 delivery vehicles and a 
+                        dedicated team of 25 staff members. Despite our growth, we remain committed to our founding 
+                        principles: reliability, affordability, and exceptional customer service.
+                    </p>
+                </div>
+                
+                <div class="story-image animate__animated animate__fadeInRight">
+                    <img src="Images/CEO.png" 
+                         alt="Michael Mteule - Founder & CEO of MTEULE Ventures" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Mission, Vision, Values -->
+            <div class="mv-grid">
+                <div class="mv-card mission animate__animated animate__fadeInUp">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>
+                        To provide fast, reliable, and affordable delivery services that connect Kayole Junction 
+                        residents and businesses, making daily life more convenient and productive for our community.
+                    </p>
+                </div>
+                
+                <div class="mv-card vision animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>
+                        To become the most trusted delivery service provider in Eastlands, Nairobi, by expanding 
+                        our services while maintaining our commitment to customer satisfaction and community development.
+                    </p>
+                </div>
+                
+                <div class="mv-card values animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="mv-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Our Values</h3>
+                    <p>
+                        Reliability, Integrity, Customer Focus, Community Engagement, and Continuous Improvement 
+                        guide every aspect of our operations and decision-making.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="section" style="background: rgba(0,0,0,0.3); border-radius: 40px; margin: 0 2rem;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet Our Leadership Team</h2>
+                <p class="section-subtitle">
+                    The dedicated individuals who make MTEULE Ventures run smoothly
+                </p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member animate__animated animate__fadeInUp">
+                                        <div class="member-image">
+                        <img src="images/ceo-photo.png" 
+                             alt="Michael Mteule" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Michael Mteule</h3>
+                        <p class="member-role">Founder & CEO</p>
+                        <p class="member-bio">
+                            With over 10 years of experience in logistics, Michael founded MTEULE Ventures to 
+                            serve his community. He oversees all operations and strategic direction.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="team-member animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Sarah Wanjiku" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Sarah Wanjiku</h3>
+                        <p class="member-role">Operations Manager</p>
+                        <p class="member-bio">
+                            Sarah joined MTEULE Ventures in 2019 and manages day-to-day operations, ensuring 
+                            all deliveries are executed efficiently and on time.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="team-member animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="David Ochieng" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>David Ochieng</h3>
+                        <p class="member-role">Customer Service Lead</p>
+                        <p class="member-bio">
+                            David heads our customer service team, ensuring every client receives excellent 
+                            support and their concerns are addressed promptly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats-section animate__animated animate__fadeIn">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat">
+                    <h3 data-count="5">0</h3>
+                    <p>Years in Business</p>
+                </div>
+                <div class="stat">
+                    <h3 data-count="5000">0</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat">
+                    <h3 data-count="25000">0</h3>
+                    <p>Successful Deliveries</p>
+                </div>
+                <div class="stat">
+                    <h3 data-count="25">0</h3>
+                    <p>Team Members</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">
+                    Hear from some of our satisfied customers in Kayole Junction
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate__animated animate__fadeInUp">
+                    <div class="testimonial-content">
+                        <p>
+                            "MTEULE Ventures has been a lifesaver for my small business. Their reliable delivery 
+                            service has helped me expand my customer base beyond Kayole."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616c113a1c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                 alt="Jane Atieno" loading="lazy">
+                        </div>
+                        <div class="author-info">
+                            <h4>Jane Atieno</h4>
+                            <p>Business Owner, Kayole</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="testimonial-content">
+                        <p>
+                            "As a working mother, grocery delivery from MTEULE Ventures saves me hours every week. 
+                            The personal shoppers always pick the freshest produce."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                 alt="Mary Kamau" loading="lazy">
+                        </div>
+                        <div class="author-info">
+                            <h4>Mary Kamau</h4>
+                            <p>Regular Customer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="testimonial-content">
+                        <p>
+                            "Their food delivery service is fast and reliable. My meals always arrive hot and fresh, 
+                            and their customer service team is very responsive."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                 alt="Joseph Omondi" loading="lazy">
+                        </div>
+                        <div class="author-info">
+                            <h4>Joseph Omondi</h4>
+                            <p>Student, Kayole Junction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section animate__animated animate__fadeIn">
+        <div class="container">
+            <h2 class="cta-title">Ready to Experience Reliable Delivery?</h2>
+            <p class="cta-subtitle">
+                Join hundreds of satisfied customers who trust MTEULE Ventures with their delivery needs.
+            </p>
+            <div class="cta-buttons">
+                <a href="index.html#order" class="btn btn-primary">
+                    <i class="fas fa-shopping-cart"></i> Place an Order
+                </a>
+                <a href="contact.html" class="btn btn-outline">
+                    <i class="fas fa-envelope"></i> Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">⚡</div>
+                        <span>MTEULE <span style="color: var(--secondary);">Ventures</span></span>
+                    </a>
+                    <p style="color: #cbd5e1;">
+                        Your trusted delivery partner in Kayole Junction, providing fast and reliable 
+                        delivery services to individuals and businesses.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/254720359985" class="social-link" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 style="color: white; font-size: 1.25rem; margin-bottom: 1rem;">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="tracking.html"><i class="fas fa-chevron-right"></i> Track Order</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="admin-login-simple.html"><i class="fas fa-user-shield"></i> Admin Login</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 style="color: white; font-size: 1.25rem; margin-bottom: 1rem;">Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="service-parcel.html"><i class="fas fa-box"></i> Parcel Delivery</a></li>
+                        <li><a href="service-food.html"><i class="fas fa-utensils"></i> Food Delivery</a></li>
+                        <li><a href="service-grocery.html"><i class="fas fa-shopping-basket"></i> Grocery Delivery</a></li>
+                        <li><a href="service-express.html"><i class="fas fa-rocket"></i> Express Delivery</a></li>
+                        <li><a href="services.html"><i class="fas fa-list"></i> All Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 style="color: white; font-size: 1.25rem; margin-bottom: 1rem;">Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Head Office</strong>
+                                <span>Kayole Junction, Nairobi, Kenya</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Call Us</strong>
+                                <span>+254720 359 985</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <span>info@mteuleventures.co.ke</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Business Hours</strong>
+                                <span>Mon-Sun: 6:00 AM - 10:00 PM</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> MTEULE Ventures - Delivery Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <button class="cta-button" id="whatsappBtn" title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+        <button class="cta-button" id="callBtn" title="Call Us">
+            <i class="fas fa-phone"></i>
+        </button>
+        <button class="cta-button" id="scrollTopBtn" title="Back to Top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Animate counter numbers
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target + (element.id.includes('satisfaction') ? '%' : '');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start) + (element.id.includes('satisfaction') ? '%' : '');
+                }
+            }, 16);
+        }
+        
+        // Initialize counters when in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+                    const target = parseInt(element.dataset.count);
+                    if (!element.animated) {
+                        animateCounter(element, target);
+                        element.animated = true;
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        // Observe all counter elements
+        document.querySelectorAll('.stat h3').forEach(el => observer.observe(el));
+        
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Floating CTA buttons
+        document.getElementById('whatsappBtn')?.addEventListener('click', () => {
+            window.open('https://wa.me/254720359985', '_blank');
+        });
+        
+        document.getElementById('callBtn')?.addEventListener('click', () => {
+            window.location.href = 'tel:+254720 359 985';
+        });
+        
+        document.getElementById('scrollTopBtn')?.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (mobileMenuBtn && navMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('show');
+            });
+        }
+        
+        // Add smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+        
+<!-- Settings Icon -->
+<!-- Settings System -->
+<div class="settings-icon" id="settingsIcon">
+    <i class="fas fa-cog"></i>
+</div>
+
+<div class="settings-panel" id="settingsPanel">
+    <div class="settings-header">
+        <h3><i class="fas fa-cog"></i> Settings</h3>
+        <button class="settings-close" id="settingsClose">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <div class="settings-content">
+        <!-- Theme Settings -->
+        <div class="setting-group">
+            <h4><i class="fas fa-palette"></i> Theme</h4>
+            <div class="theme-toggle">
+                <button class="theme-btn active" data-theme="dark">
+                    <i class="fas fa-moon"></i> Dark
+                </button>
+                <button class="theme-btn" data-theme="light">
+                    <i class="fas fa-sun"></i> Light
+                </button>
+                <button class="theme-btn" data-theme="auto">
+                    <i class="fas fa-adjust"></i> Auto
+                </button>
+            </div>
+        </div>
+        
+        <!-- Font Size -->
+        <div class="setting-group">
+            <h4><i class="fas fa-text-height"></i> Font Size</h4>
+            <div class="font-size-control">
+                <button class="font-btn active" data-size="small">A-</button>
+                <button class="font-btn" data-size="medium">A</button>
+                <button class="font-btn" data-size="large">A+</button>
+            </div>
+        </div>
+        
+        <!-- Animations Toggle -->
+        <div class="setting-group">
+            <h4><i class="fas fa-play-circle"></i> Animations</h4>
+            <div class="toggle-switch">
+                <input type="checkbox" id="animationsToggle" checked>
+                <label for="animationsToggle" class="toggle-slider"></label>
+            </div>
+        </div>
+        
+        <!-- Reset Button -->
+        <div class="setting-group">
+            <button class="btn-reset" id="resetSettings">
+                <i class="fas fa-redo"></i> Reset to Defaults
+            </button>
+        </div>
+        
+        <!-- Version Info -->
+        <div class="setting-footer">
+            <p>MTEULE Ventures v1.0</p>
+            <p>© 2024 All rights reserved</p>
+        </div>
+    </div>
+</div>
+<script>
+// Settings System JavaScript
+(function() {
+    'use strict';
+    
+    // Wait for DOM to be ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSettings);
+    } else {
+        initSettings();
+    }
+    
+    function initSettings() {
+        // Create elements if they don't exist
+        if (!document.getElementById('settingsIcon')) {
+            document.body.insertAdjacentHTML('beforeend', `' + $settingsHTML + '`);
+        }
+        
+        // Get elements
+        const settingsIcon = document.getElementById('settingsIcon');
+        const settingsPanel = document.getElementById('settingsPanel');
+        const settingsClose = document.getElementById('settingsClose');
+        const themeButtons = document.querySelectorAll('.theme-btn');
+        const fontButtons = document.querySelectorAll('.font-btn');
+        const animationsToggle = document.getElementById('animationsToggle');
+        const resetButton = document.getElementById('resetSettings');
+        
+        // Toggle settings panel
+        function toggleSettings() {
+            settingsPanel.classList.toggle('active');
+            document.body.style.overflow = settingsPanel.classList.contains('active') ? 'hidden' : '';
+        }
+        
+        // Event Listeners
+        settingsIcon.addEventListener('click', toggleSettings);
+        settingsClose.addEventListener('click', toggleSettings);
+        
+        // Close panel when clicking outside
+        settingsPanel.addEventListener('click', function(e) {
+            if (e.target === this) toggleSettings();
+        });
+        
+        // Close with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && settingsPanel.classList.contains('active')) {
+                toggleSettings();
+            }
+        });
+        
+        // Theme Switching
+        function setTheme(theme) {
+            document.body.classList.remove('dark-mode', 'light-mode');
+            
+            if (theme === 'auto') {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                document.body.classList.add(prefersDark ? 'dark-mode' : 'light-mode');
+            } else {
+                document.body.classList.add(theme + '-mode');
+            }
+            
+            themeButtons.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.theme === theme);
+            });
+            
+            localStorage.setItem('mteule_theme', theme);
+        }
+        
+        themeButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                setTheme(this.dataset.theme);
+            });
+        });
+        
+        // Font Size Switching
+        function setFontSize(size) {
+            document.body.classList.remove('font-small', 'font-medium', 'font-large');
+            if (size !== 'medium') {
+                document.body.classList.add('font-' + size);
+            }
+            
+            fontButtons.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.size === size);
+            });
+            
+            localStorage.setItem('mteule_fontSize', size);
+        }
+        
+        fontButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                setFontSize(this.dataset.size);
+            });
+        });
+        
+        // Animations Toggle
+        animationsToggle.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.remove('animations-disabled');
+            } else {
+                document.body.classList.add('animations-disabled');
+            }
+            localStorage.setItem('mteule_animations', this.checked);
+        });
+        
+        // Reset Settings
+        resetButton.addEventListener('click', function() {
+            if (confirm('Reset all settings to defaults?')) {
+                localStorage.clear();
+                location.reload();
+            }
+        });
+        
+        // Load saved settings
+        function loadSavedSettings() {
+            const savedTheme = localStorage.getItem('mteule_theme') || 'dark';
+            setTheme(savedTheme);
+            
+            const savedFontSize = localStorage.getItem('mteule_fontSize') || 'medium';
+            setFontSize(savedFontSize);
+            
+            const savedAnimations = localStorage.getItem('mteule_animations');
+            if (savedAnimations !== null) {
+                animationsToggle.checked = savedAnimations === 'true';
+                animationsToggle.dispatchEvent(new Event('change'));
+            }
+        }
+        
+        // Initialize
+        loadSavedSettings();
+    }
+})();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
